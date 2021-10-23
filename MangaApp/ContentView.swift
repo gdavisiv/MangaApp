@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .leading, spacing: 4.0){
+            Text("Manga Shop!")
+                .fontWeight(.bold)
+            // "/n" adds a nice break see sentence below
+            Text("Your place to read/share and \nEarn money from your comics!")
+                .font(.footnote)
+        }
     }
 }
 
