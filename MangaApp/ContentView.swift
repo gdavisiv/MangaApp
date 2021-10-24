@@ -10,14 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4.0) {
-            Image("Illustration 1")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            //Created a card fully adaptable for all screens in iOS
+            Spacer()
+            HStack {
+                Spacer()
+                Image("Illustration 1")
+                    //Used to resize the image
+                    .resizable()
+                    //Used to fit the image to specific Ratio
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
+            }
             Text("Manga Shop!")
                 .fontWeight(.bold)
+                .foregroundColor(Color.white)
             // "/n" adds a nice break see sentence below
             Text("Your place to read/share and \nEarn money from your comics!")
                 .font(.footnote)
+                .foregroundColor(Color.white)
         }
         .padding(.all)
         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
@@ -28,6 +38,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView()
+                .previewLayout(.fixed(width: 200.0, height: 200.0))
+                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+        }
     }
 }
