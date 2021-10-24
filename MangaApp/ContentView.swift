@@ -30,7 +30,7 @@ struct ContentView: View {
                 .foregroundColor(Color.white)
         }
         .padding(.all)
-        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+        .background(Color.blue)
         .cornerRadius(20)
         .shadow(radius: 20)
     }
@@ -42,7 +42,7 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
             ContentView()
                 .previewLayout(.fixed(width: 200.0, height: 200.0))
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+                .preferredColorScheme(.dark)
         }
     }
 }
