@@ -9,10 +9,20 @@ import SwiftUI
 
 struct CourseRow: View {
     var body: some View {
-        Image(systemName: "paperplane.circle.fill")
-            //Rendering mode changes the color 
-            .renderingMode(.original)
-            .imageScale(.large)
+        HStack(alignment: .top) {
+            Image(systemName: "paperplane.circle.fill")
+                //Rendering mode changes the color
+                .renderingMode(.original)
+                .imageScale(.medium)
+            VStack(alignment: .leading, spacing: 4.0) {
+                Text("Manga Online")
+                    .font(.subheadline)
+                    .bold()
+                Text("Description")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
 
