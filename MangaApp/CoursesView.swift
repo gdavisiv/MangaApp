@@ -12,6 +12,8 @@ struct CoursesView: View {
         List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
             CourseRow()
         }
+        //Allows the list style to be inset so that its seperated from the top and edges
+        .listStyle(InsetGroupedListStyle())
     }
 }
 
