@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoursesView: View {
     var body: some View {
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+        List(0 ..< 20) { item in
             CourseRow()
         }
         //Allows the list style to be inset so that its seperated from the top and edges
