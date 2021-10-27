@@ -14,6 +14,7 @@ struct CoursesView: View {
         }
         //Allows the list style to be inset so that its seperated from the top and edges
         .listStyle(InsetGroupedListStyle())
+        .navigationTitle("Most Popular Anime & Manga")
     }
 }
 
