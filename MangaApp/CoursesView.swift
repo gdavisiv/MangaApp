@@ -4,6 +4,7 @@
 //
 //  Created by George Davis IV on 10/25/21.
 //
+//
 
 import SwiftUI
 
@@ -16,6 +17,7 @@ struct CoursesView: View {
             .listStyle(InsetGroupedListStyle())
         #else
         content
+            .frame(minWidth: 800, minHeight: 600)
         #endif
     }
     var content: some View {
