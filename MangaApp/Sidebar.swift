@@ -15,10 +15,22 @@ struct Sidebar: View {
             #if os(iOS)
             content
                 .navigationTitle("Read More")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Image(systemName: "person.crop.circle")
+                    }
+                }
             //Else use the following content with appropriate settings for all other devices
             #else
             content
+                //This should not be used outside of the MAC because it doesn't
+                //makes sense for iOS to have fixed with for sidebar
                 .frame(minWidth: 200, idealWidth: 250, maxWidth: 300)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Image(systemName: "person.crop.circle")
+                    }
+                }
             #endif
             
             
