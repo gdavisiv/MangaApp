@@ -27,8 +27,10 @@ struct Sidebar: View {
                 //makes sense for iOS to have fixed with for sidebar
                 .frame(minWidth: 200, idealWidth: 250, maxWidth: 300)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Image(systemName: "person.crop.circle")
+                    ToolbarItem(placement: .automatic) {
+                        Button(action: {}) {
+                            Image(systemName: "person.crop.circle")
+                        }
                     }
                 }
             #endif
