@@ -19,17 +19,22 @@ struct CoursesView: View {
             VStack {
                 if show {
                     CourseItem()
-                        .transition(.slide)
+                        //Makes sure the card slides in from the Right side and full screen mode
+                        .transition(.move(edge: .trailing))
+                        //Provides full screen mode
+                        .edgesIgnoringSafeArea(.all)
                         //.zIndex used to fix the positioning of where the car disappears ON TOP only
                         //.zIndex(1)
                 }
             }
         }
         .onTapGesture {
-            //Everytime we tap on the card it will be shown
-            show.toggle()
+            withAnimation(.spring()) {
+                //Everytime we tap on the card it will be shown
+                show.toggle()
+            }
         }
-        .animation(.easeIn)
+        //.animation(.spring())
     }
 }
 
