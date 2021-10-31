@@ -23,15 +23,18 @@ struct CoursesView: View {
                 .frame(width: 335, height: 250)
             VStack {
                 if show {
-                    CourseItem()
-                        .matchedGeometryEffect(id: "ID", in: namespace)
-                        .frame(height: 300)
-                        //Changed the transition to opacity so that it will smoothly scale Animate
-                        .transition(.opacity)
-                        //Makes sure the card slides in from the Right side and full screen mode
-                        //.transition(.move(edge: .trailing))
-                        //Provides full screen mode
-                        .edgesIgnoringSafeArea(.all)
+                    ScrollView {
+                        CourseItem()
+                            .matchedGeometryEffect(id: "ID", in: namespace)
+                            .frame(height: 300)
+                            //Changed the transition to opacity so that it will smoothly scale Animate
+                        CourseRow()
+                    }
+                    .transition(.opacity)
+                    //Makes sure the card slides in from the Right side and full screen mode
+                    //.transition(.move(edge: .trailing))
+                    //Provides full screen mode
+                    .edgesIgnoringSafeArea(.all)
                         //.zIndex used to fix the positioning of where the car disappears ON TOP only
                         //.zIndex(1)
                 }
