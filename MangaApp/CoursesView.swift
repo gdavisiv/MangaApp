@@ -21,23 +21,27 @@ struct CoursesView: View {
                 //to the first CourseItem()
                 .matchedGeometryEffect(id: "ID", in: namespace, isSource: !show)
                 .frame(width: 335, height: 250)
-            VStack {
-                if show {
-                    ScrollView {
-                        CourseItem()
-                            .matchedGeometryEffect(id: "ID", in: namespace)
-                            .frame(height: 300)
-                            //Changed the transition to opacity so that it will smoothly scale Animate
-                        CourseRow()
+            
+            if show {
+                ScrollView {
+                    CourseItem()
+                        .matchedGeometryEffect(id: "ID", in: namespace)
+                        .frame(height: 300)
+                    //Changed the transition to opacity so that it will smoothly scale Animate
+                    VStack {
+                        ForEach(0 ..< 20) { item in
+                            CourseRow()
+                        }
                     }
-                    .transition(.opacity)
-                    //Makes sure the card slides in from the Right side and full screen mode
-                    //.transition(.move(edge: .trailing))
-                    //Provides full screen mode
-                    .edgesIgnoringSafeArea(.all)
-                        //.zIndex used to fix the positioning of where the car disappears ON TOP only
-                        //.zIndex(1)
+                    .padding()
                 }
+                .transition(.opacity)
+                //Makes sure the card slides in from the Right side and full screen mode
+                //.transition(.move(edge: .trailing))
+                //Provides full screen mode
+                .edgesIgnoringSafeArea(.all)
+                //.zIndex used to fix the positioning of where the car disappears ON TOP only
+                //.zIndex(1)
             }
         }
         //Starts when use taps the screen
@@ -47,7 +51,6 @@ struct CoursesView: View {
                 show.toggle()
             }
         }
-        //.animation(.spring())
     }
 }
 
