@@ -35,7 +35,13 @@ struct CoursesView: View {
                     }
                     .padding()
                 }
-                .transition(.opacity)
+                //AnyTransition allows more targeted Animations to timing/spring/delay
+                .transition(
+                    AnyTransition
+                        .opacity
+                        .animation(.spring()
+                            .delay(0.3))
+                )
                 //Makes sure the card slides in from the Right side and full screen mode
                 //.transition(.move(edge: .trailing))
                 //Provides full screen mode
