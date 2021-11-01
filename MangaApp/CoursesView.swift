@@ -36,11 +36,22 @@ struct CoursesView: View {
                     .padding()
                 }
                 //AnyTransition allows more targeted Animations to timing/spring/delay
+                //
+                //Adding Asymetric allows the delay at insertions/beginning and then I removed
+                //the delay at removal/reverse of the transition when it goes back to its normal state
+                //This ensure that CourseRow doesn't delay 0.3 before transitioning back into CourseItem
                 .transition(
-                    AnyTransition
-                        .opacity
-                        .animation(.spring()
-                            .delay(0.3))
+                    .asymmetric(
+                        insertion:
+                            AnyTransition
+                                    .opacity
+                                    .animation(.spring()
+                                        .delay(0.3)),
+                        removal:
+                            AnyTransition
+                                .opacity
+                                .animation(.spring())
+                    )
                 )
                 //Makes sure the card slides in from the Right side and full screen mode
                 //.transition(.move(edge: .trailing))
