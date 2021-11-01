@@ -16,11 +16,18 @@ struct CoursesView: View {
     
     var body: some View {
         ZStack {
-            CourseItem()
-                //Moves the transition from a seperate card
-                //to the first CourseItem()
-                .matchedGeometryEffect(id: "ID", in: namespace, isSource: !show)
-                .frame(width: 335, height: 250)
+            ScrollView {
+                VStack(spacing: 20) {
+                    CourseItem()
+                        //Moves the transition from a seperate card
+                        //to the first CourseItem()
+                        .matchedGeometryEffect(id: "ID", in: namespace, isSource: !show)
+                        .frame(width: 335, height: 250)
+                    CourseItem()
+                        .frame(width: 335, height: 250)
+                }
+                .frame(maxWidth: .infinity)
+            }
             
             if show {
                 ScrollView {
@@ -35,6 +42,7 @@ struct CoursesView: View {
                     }
                     .padding()
                 }
+                .background(Color("Background 1"))
                 //AnyTransition allows more targeted Animations to timing/spring/delay
                 //
                 //Adding Asymetric allows the delay at insertions/beginning and then I removed
