@@ -16,6 +16,7 @@
 		E28403F22723766A00B8F6F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28403F12723766A00B8F6F2 /* Preview Assets.xcassets */; };
 		E2BBB12C27277549000849D3 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BBB12B27277549000849D3 /* CoursesView.swift */; };
 		E2BBB12E272776B5000849D3 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BBB12D272776B5000849D3 /* Sidebar.swift */; };
+		E2EDE6862730DEC800B91A36 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDE6852730DEC800B91A36 /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E28403F32723766A00B8F6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BBB12B27277549000849D3 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		E2BBB12D272776B5000849D3 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		E2EDE6852730DEC800B91A36 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				E25C0F32272B7C2C0070C11F /* Navigation */,
 				E25C0F33272B7C410070C11F /* Items */,
 				E2BBB12B27277549000849D3 /* CoursesView.swift */,
+				E2EDE6852730DEC800B91A36 /* Course.swift */,
 				E25C0F34272B7CF00070C11F /* CourseList.swift */,
 				E28403EE2723766A00B8F6F2 /* Assets.xcassets */,
 				E28403F32723766A00B8F6F2 /* Info.plist */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EDE6862730DEC800B91A36 /* Course.swift in Sources */,
 				E2BBB12E272776B5000849D3 /* Sidebar.swift in Sources */,
 				E25C0F31272B7B3E0070C11F /* CourseItem.swift in Sources */,
 				E28403ED2723766900B8F6F2 /* ContentView.swift in Sources */,
