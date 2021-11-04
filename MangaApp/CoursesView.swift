@@ -13,6 +13,10 @@ struct CoursesView: View {
     @State var show = false
     //Where you set a collection of match elements
     @Namespace var namespace
+    //This state will allows us to know if the
+    @State var selectedItem: Course? = nil
+    //Create a new state to make sure user does not select on another card by mistake
+    @State var isDisabled = false
     
     var body: some View {
         ZStack {
@@ -23,18 +27,40 @@ struct CoursesView: View {
                             //Moves the transition from a seperate card
                             //to the first CourseItem()
                             .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
-                        .frame(width: 335, height: 250)
+                            .frame(width: 335, height: 250)
+                            //Starts when use taps the screen
+                            .onTapGesture {
+                                withAnimation(.spring()) {
+                                    //Everytime we tap on the card it will be shown
+                                    show.toggle()
+                                    selectedItem = item
+                                    isDisabled = true
+                                }
+                            }
+                            .disabled(isDisabled)
+                        }
                     }
+                    .frame(maxWidth: .infinity)
                 }
-                .frame(maxWidth: .infinity)
-            }
-            
-            if show {
+                
+            if selectedItem != nil {
                 ScrollView {
-                    CourseItem(course: courses[0])
+                    //Use the exclamation because we knwo for sure selectedItem will not be empty
+                    CourseItem(course: selectedItem!)
                         //The full screen card will be matched with the first card
-                        .matchedGeometryEffect(id: courses[0].id, in: namespace)
+                        .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
                         .frame(height: 300)
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                //Everytime we tap on the card it will be shown
+                                show.toggle()
+                                selectedItem = nil
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    isDisabled = false
+                                }
+
+                            }
+                        }
                     //Changed the transition to opacity so that it will smoothly scale Animate
                     VStack {
                         ForEach(0 ..< 20) { item in
@@ -68,13 +94,6 @@ struct CoursesView: View {
                 .edgesIgnoringSafeArea(.all)
                 //.zIndex used to fix the positioning of where the car disappears ON TOP only
                 //.zIndex(1)
-            }
-        }
-        //Starts when use taps the screen
-        .onTapGesture {
-            withAnimation(.spring()) {
-                //Everytime we tap on the card it will be shown
-                show.toggle()
             }
         }
     }
