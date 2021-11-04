@@ -18,21 +18,22 @@ struct CoursesView: View {
         ZStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    CourseItem()
-                        //Moves the transition from a seperate card
-                        //to the first CourseItem()
-                        .matchedGeometryEffect(id: "ID", in: namespace, isSource: !show)
+                    ForEach(courses) { item in
+                        CourseItem(course: item)
+                            //Moves the transition from a seperate card
+                            //to the first CourseItem()
+                            .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
                         .frame(width: 335, height: 250)
-                    CourseItem()
-                        .frame(width: 335, height: 250)
+                    }
                 }
                 .frame(maxWidth: .infinity)
             }
             
             if show {
                 ScrollView {
-                    CourseItem()
-                        .matchedGeometryEffect(id: "ID", in: namespace)
+                    CourseItem(course: courses[0])
+                        //The full screen card will be matched with the first card
+                        .matchedGeometryEffect(id: courses[0].id, in: namespace)
                         .frame(height: 300)
                     //Changed the transition to opacity so that it will smoothly scale Animate
                     VStack {
