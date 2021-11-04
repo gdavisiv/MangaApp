@@ -29,56 +29,56 @@ var courses = [
     Course(
         title: "The Beginning After the End",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 2",
         color: Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1))
     ),
     
     Course(
         title: "Dr. Stone",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 3",
         color: Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))
     ),
     
     Course(
         title: "Peerless Dad",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 4",
         color: Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))
     ),
     
     Course(
         title: "The Previous Life of a Murium Ranker",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 5",
         color: Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1))
     ),
     
     Course(
         title: "Skeleton Soldier Couldn't Protect the Dungeon",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 6",
         color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
     ),
     
     Course(
         title: "Dungeon House",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 7",
         color: Color(#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1))
     ),
     
     Course(
         title: "The Lone Necromancer",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 8",
         color: Color(#colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1))
     ),
     
     Course(
         title: "Red Storm",
         subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
-        image: "Illustration 1",
+        image: "Illustration 9",
         color: Color(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1))
     )
 ]
