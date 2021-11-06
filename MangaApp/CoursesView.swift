@@ -21,13 +21,13 @@ struct CoursesView: View {
     var body: some View {
         ZStack {
             ScrollView {
-                VStack(spacing: 20) {
+                LazyVGrid(columns: [GridItem()], spacing: 16) {
                     ForEach(courses) { item in
                         CourseItem(course: item)
                             //Moves the transition from a seperate card
                             //to the first CourseItem()
                             .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
-                            .frame(width: 335, height: 250)
+                            .frame(height: 250)
                             //Starts when use taps the screen
                             .onTapGesture {
                                 withAnimation(.spring()) {
@@ -40,6 +40,7 @@ struct CoursesView: View {
                             .disabled(isDisabled)
                         }
                     }
+                    .padding(16)
                     .frame(maxWidth: .infinity)
                 }
                 
