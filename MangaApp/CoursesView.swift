@@ -21,13 +21,19 @@ struct CoursesView: View {
     var body: some View {
         ZStack {
             ScrollView {
-                LazyVGrid(columns: [GridItem()], spacing: 16) {
+                //'.adaptive' allows the grid to respond to the screen size
+                LazyVGrid(
+                    columns: [
+                        GridItem(.adaptive(minimum: 160), spacing: 16)
+                    ],
+                    spacing: 16
+                ) {
                     ForEach(courses) { item in
                         CourseItem(course: item)
                             //Moves the transition from a seperate card
                             //to the first CourseItem()
                             .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
-                            .frame(height: 250)
+                            .frame(height: 200)
                             //Starts when use taps the screen
                             .onTapGesture {
                                 withAnimation(.spring()) {
