@@ -4,7 +4,7 @@
 //
 //  Created by George Davis IV on 10/25/21.
 //
-//
+//Matched Container and ZIndex  04:09
 
 import SwiftUI
 
@@ -37,7 +37,7 @@ struct CoursesView: View {
                                 .frame(height: 200)
                                 //Starts when use taps the screen
                                 .onTapGesture {
-                                    withAnimation(.spring()) {
+                                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
                                         //Everytime we tap on the card it will be shown
                                         show.toggle()
                                         selectedItem = item
@@ -86,6 +86,7 @@ struct CoursesView: View {
                     }
                 }
                 .background(Color("Background 1"))
+                .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
                 .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
                 //Makes sure the card slides in from the Right side and full screen mode
                 //.transition(.move(edge: .trailing))
