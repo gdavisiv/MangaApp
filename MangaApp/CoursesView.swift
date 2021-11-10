@@ -58,41 +58,45 @@ struct CoursesView: View {
             .zIndex(1)
             
             if selectedItem != nil {
-                VStack {
-                    ScrollView {
-                        //Use the exclamation because we knwo for sure selectedItem will not be empty
-                        CourseItem(course: selectedItem!)
-                            //The full screen card will be matched with the first card
-                            .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
-                            .frame(height: 300)
-                            .onTapGesture {
-                                withAnimation(.spring()) {
-                                    //Everytime we tap on the card it will be shown
-                                    show.toggle()
-                                    selectedItem = nil
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                        isDisabled = false
-                                    }
-
+                ZStack(alignment: .topTrailing) {
+                    VStack {
+                        ScrollView {
+                            //Use the exclamation because we knwo for sure selectedItem will not be empty
+                            CourseItem(course: selectedItem!)
+                                //The full screen card will be matched with the first card
+                                .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
+                                .frame(height: 300)
+                            //Changed the transition to opacity so that it will smoothly scale Animate
+                            VStack {
+                                ForEach(0 ..< 20) { item in
+                                    CourseRow()
                                 }
                             }
-                        //Changed the transition to opacity so that it will smoothly scale Animate
-                        VStack {
-                            ForEach(0 ..< 20) { item in
-                                CourseRow()
+                            .padding()
+                        }
+                    }
+                    .background(Color("Background 1"))
+                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+                    .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
+                    //Makes sure the card slides in from the Right side and full screen mode
+                    //.transition(.move(edge: .trailing))
+                    //Provides full screen mode
+                    .edgesIgnoringSafeArea(.all)
+                    //.zIndex used to fix the positioning of where the car disappears ON TOP only
+                    
+                CloseButton()
+                    .padding(.trailing, 16)
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            //Everytime we tap on the card it will be shown
+                            show.toggle()
+                            selectedItem = nil
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                isDisabled = false
                             }
                         }
-                        .padding()
                     }
                 }
-                .background(Color("Background 1"))
-                .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-                .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
-                //Makes sure the card slides in from the Right side and full screen mode
-                //.transition(.move(edge: .trailing))
-                //Provides full screen mode
-                .edgesIgnoringSafeArea(.all)
-                //.zIndex used to fix the positioning of where the car disappears ON TOP only
                 .zIndex(2)
             }
         }
