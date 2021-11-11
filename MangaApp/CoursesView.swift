@@ -59,9 +59,8 @@ struct CoursesView: View {
             
             if selectedItem != nil {
                 ZStack(alignment: .topTrailing) {
-                    CourseDetail()
+                    CourseDetail(course: selectedItem!, namespace: namespace)
 
-                    
                     CloseButton()
                         .padding(.trailing, 16)
                         .onTapGesture {
