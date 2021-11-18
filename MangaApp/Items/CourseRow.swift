@@ -4,11 +4,12 @@
 //
 //  Created by George Davis IV on 10/24/21.
 //
-//08:00
 
 import SwiftUI
 
 struct CourseRow: View {
+    var item: CourseSection = courseSections[0]
+    
     var body: some View {
         HStack(alignment: .top) {
             Image(systemName: "paperplane.circle.fill")

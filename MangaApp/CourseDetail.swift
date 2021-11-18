@@ -21,7 +21,7 @@ struct CourseDetail: View {
                     .frame(height: 300)
                 //Changed the transition to opacity so that it will smoothly scale Animate
                 VStack {
-                    ForEach(0 ..< 20) { item in
+                    ForEach(courseSections) { item in
                         CourseRow()
                     }
                 }
