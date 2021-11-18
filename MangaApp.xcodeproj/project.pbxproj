@@ -15,6 +15,13 @@
 		E28403ED2723766900B8F6F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28403EC2723766900B8F6F2 /* ContentView.swift */; };
 		E28403EF2723766A00B8F6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28403EE2723766A00B8F6F2 /* Assets.xcassets */; };
 		E28403F22723766A00B8F6F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28403F12723766A00B8F6F2 /* Preview Assets.xcassets */; };
+		E28BB52E2746053800986AD0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB5272746053800986AD0 /* Download.swift */; };
+		E28BB52F2746053800986AD0 /* TutorialSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB5282746053800986AD0 /* TutorialSection.swift */; };
+		E28BB5302746053800986AD0 /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB5292746053800986AD0 /* CourseSection.swift */; };
+		E28BB5312746053800986AD0 /* GradientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB52A2746053800986AD0 /* GradientModel.swift */; };
+		E28BB5322746053800986AD0 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB52B2746053800986AD0 /* Tutorial.swift */; };
+		E28BB5332746053800986AD0 /* LivestreamSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB52C2746053800986AD0 /* LivestreamSection.swift */; };
+		E28BB5342746053800986AD0 /* Livestream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28BB52D2746053800986AD0 /* Livestream.swift */; };
 		E2958817273CB13A00D14CBD /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2958816273CB13A00D14CBD /* CourseDetail.swift */; };
 		E2BBB12C27277549000849D3 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BBB12B27277549000849D3 /* CoursesView.swift */; };
 		E2BBB12E272776B5000849D3 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BBB12D272776B5000849D3 /* Sidebar.swift */; };
@@ -32,6 +39,13 @@
 		E28403EE2723766A00B8F6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E28403F12723766A00B8F6F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E28403F32723766A00B8F6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28BB5272746053800986AD0 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		E28BB5282746053800986AD0 /* TutorialSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialSection.swift; sourceTree = "<group>"; };
+		E28BB5292746053800986AD0 /* CourseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
+		E28BB52A2746053800986AD0 /* GradientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientModel.swift; sourceTree = "<group>"; };
+		E28BB52B2746053800986AD0 /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		E28BB52C2746053800986AD0 /* LivestreamSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivestreamSection.swift; sourceTree = "<group>"; };
+		E28BB52D2746053800986AD0 /* Livestream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livestream.swift; sourceTree = "<group>"; };
 		E2958816273CB13A00D14CBD /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		E2BBB12B27277549000849D3 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		E2BBB12D272776B5000849D3 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
@@ -113,6 +127,13 @@
 			isa = PBXGroup;
 			children = (
 				E2EDE6852730DEC800B91A36 /* Course.swift */,
+				E28BB5292746053800986AD0 /* CourseSection.swift */,
+				E28BB5272746053800986AD0 /* Download.swift */,
+				E28BB52A2746053800986AD0 /* GradientModel.swift */,
+				E28BB52D2746053800986AD0 /* Livestream.swift */,
+				E28BB52C2746053800986AD0 /* LivestreamSection.swift */,
+				E28BB52B2746053800986AD0 /* Tutorial.swift */,
+				E28BB5282746053800986AD0 /* TutorialSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,13 +208,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2EDE6862730DEC800B91A36 /* Course.swift in Sources */,
+				E28BB52F2746053800986AD0 /* TutorialSection.swift in Sources */,
 				E2BBB12E272776B5000849D3 /* Sidebar.swift in Sources */,
+				E28BB5332746053800986AD0 /* LivestreamSection.swift in Sources */,
+				E28BB5312746053800986AD0 /* GradientModel.swift in Sources */,
+				E28BB5322746053800986AD0 /* Tutorial.swift in Sources */,
+				E28BB52E2746053800986AD0 /* Download.swift in Sources */,
 				E25C0F31272B7B3E0070C11F /* CourseItem.swift in Sources */,
 				E2958817273CB13A00D14CBD /* CourseDetail.swift in Sources */,
 				E20A9C31273B5D630060F3D9 /* CloseButton.swift in Sources */,
+				E28BB5342746053800986AD0 /* Livestream.swift in Sources */,
 				E28403ED2723766900B8F6F2 /* ContentView.swift in Sources */,
 				E2448AB52725FB4E000EDC3D /* CourseRow.swift in Sources */,
 				E28403EB2723766900B8F6F2 /* MangaAppApp.swift in Sources */,
+				E28BB5302746053800986AD0 /* CourseSection.swift in Sources */,
 				E2BBB12C27277549000849D3 /* CoursesView.swift in Sources */,
 				E25C0F35272B7CF00070C11F /* CourseList.swift in Sources */,
 			);
