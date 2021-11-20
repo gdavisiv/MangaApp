@@ -22,7 +22,8 @@ struct CourseDetail: View {
                 //Changed the transition to opacity so that it will smoothly scale Animate
                 VStack {
                     ForEach(courseSections) { item in
-                        CourseRow()
+                        CourseRow(item: item)
+                        Divider()
                     }
                 }
                 .padding()
