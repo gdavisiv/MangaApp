@@ -17,14 +17,14 @@ struct CourseSection: Identifiable, Hashable {
 
 var courseSections = [
     CourseSection(
-        title: "SwiftUI for iOS 14",
-        subtitle: "Build a multi-platform app for iOS, iPadOS and Big Sur",
+        title: "All Rounder",
+        subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
         logo: "Logo SwiftUI",
         color: Color(#colorLiteral(red: 0.1776223481, green: 0.003123702249, blue: 0.9679456353, alpha: 1))
     ),
     CourseSection(
-        title: "SwiftUI Visual Editor",
-        subtitle: "Learn Xcode 12's new visual editing and inspector tools",
+        title: "The Beginning After the End",
+        subtitle: "A world full of zombies.  But this apocolypse... is worth trying??",
         logo: "Logo SwiftUI",
         color: Color(#colorLiteral(red: 0.4163374901, green: 0, blue: 0.9587711692, alpha: 1))
     ),
