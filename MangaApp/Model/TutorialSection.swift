@@ -1,8 +1,8 @@
 //
 //  TutorialSection.swift
-//  DesignCodeUniversal
+//  MangaApp
 //
-//  Created by Meng To on 7/9/20.
+//  Created by George Davis IV on 11/1/21.
 //
 
 import SwiftUI

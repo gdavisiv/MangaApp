@@ -1,10 +1,9 @@
 //
 //  Tutorial.swift
-//  iOS
+//  MangaApp
 //
-//  Created by Meng To on 7/3/20.
+//  Created by George Davis IV on 11/1/21.
 //
-
 import SwiftUI
 
 struct Tutorial: Identifiable {

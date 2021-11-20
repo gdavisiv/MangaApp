@@ -1,8 +1,8 @@
 //
-//  Livestream.swift
-//  DesignCodeUniversal
+//  Livestreamswift
+//  MangaApp
 //
-//  Created by Meng To on 7/7/20.
+//  Created by George Davis IV on 11/1/21.
 //
 
 import SwiftUI
