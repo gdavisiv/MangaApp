@@ -4,7 +4,6 @@
 //
 //  Created by George Davis IV on 10/28/21.
 //
-//
 
 import SwiftUI
 
