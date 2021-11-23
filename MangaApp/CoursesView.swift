@@ -75,6 +75,9 @@ struct CoursesView: View {
                 }
                 //.zIndex used to fix the positioning of where the car disappears ON TOP only
                 .zIndex(2)
+                .frame(maxWidth: 712)
+                .frame(minWidth: .infinity)
+                .background(VisualEffectBlur())
             }
         }
     }
