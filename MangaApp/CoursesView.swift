@@ -77,7 +77,7 @@ struct CoursesView: View {
                 .zIndex(2)
                 .frame(maxWidth: 712)
                 .frame(minWidth: .infinity)
-                .background(VisualEffectBlur())
+                //.background(VisualEffectBlur())
             }
         }
     }
